@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Employee Management System</h1>
+            <div class="header-actions">
+                <div class="filter-buttons">
+                    <button id="all-employees-btn" class="active">All Employees</button>
+                    <button id="active-employees-btn">Active Employees</button>
+                </div>
+                <button id="add-employee-btn" class="primary-btn">
+                    <i class="fas fa-plus"></i> Add Employee
+                </button>
+                <button id="refresh-btn">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+            </div>
+        </header>
+
+        <div id="notification" class="notification hidden"></div>
+        
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading employees...</p>
+        </div>
+
+        <div id="employees-container" class="employees-container hidden">
+            <table id="employees-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Hire Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="employees-table-body">
+                    <!-- Employee rows will be populated here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Modal for employee details -->
+        <div id="details-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Employee Details</h2>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body" id="details-content">
+                    <!-- Employee details will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for adding employee -->
+        <div id="add-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Add New Employee</h2>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="add-employee-form">
+                        <div class="form-group">
+                            <label for="name">Name (Format: First Last)</label>
+                            <input type="text" id="name" name="name" placeholder="John Smith" required>
+                            <small>Name must be in 'First Last' format</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="position">Position</label>
+                            <input type="text" id="position" name="position" placeholder="Software Engineer" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hire-date">Hire Date</label>
+                            <input type="date" id="hire-date" name="hireDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="manager-id">Manager ID (optional)</label>
+                            <input type="text" id="manager-id" name="managerId" placeholder="e.g. 1">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="cancel-btn">Cancel</button>
+                            <button type="submit" class="submit-btn">Add Employee</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

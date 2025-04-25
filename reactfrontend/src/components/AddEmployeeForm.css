@@ -1,0 +1,73 @@
+.form-group select[multiple] {
+  min-height: 120px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+}
+
+.form-group select[multiple] option {
+  padding: 8px;
+  margin: 2px 0;
+  border-radius: 4px;
+}
+
+.form-group select[multiple] option:hover {
+  background-color: #f0f0f0;
+}
+
+.modal-container {
+  position: relative;
+  z-index: 1000;
+}
+
+.form-group select[multiple] option:checked {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.error-alert {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff1f0;
+  border: 1px solid #ffa39e;
+  border-radius: 4px;
+}
+
+.error-content {
+  text-align: center;
+}
+
+.error-content h3 {
+  color: #cf1322;
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+
+.error-content p {
+  color: #434343;
+  margin: 0 0 15px 0;
+}
+
+.error-content button {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.error-content button:hover {
+  background-color: #ff7875;
+}
+
+.form-text {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+  display: block;
+}
